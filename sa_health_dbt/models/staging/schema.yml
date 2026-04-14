@@ -1,0 +1,24 @@
+version: 2
+
+sources:
+  - name: who_health
+    database: healthmetrics-491205
+    schema: who_health
+    tables:
+      - name: TB_Indicator
+        description: "Raw WHO South Africa TB and HIV health indicators loaded from CSV."
+
+models:
+  - name: stg_tb_indicator
+    description: "Cleaned staging layer of the WHO TB_Indicator table. Renames raw columns to usable names."
+    columns:
+      - name: year
+        description: "The year of the health indicator measurement."
+        tests:
+          - not_null
+      - name: indicator_code
+        description: "WHO GHO indicator code (e.g. TB_1, TB_e_inc_num)."
+        tests:
+          - not_null
+      - name: value
+        description: "Numeric value of the indicator for the given year."

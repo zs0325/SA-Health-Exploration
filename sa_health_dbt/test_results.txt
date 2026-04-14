@@ -1,0 +1,52 @@
+[0m13:06:42  Running with dbt=1.11.7
+[0m13:06:45  Registered adapter: bigquery=1.11.1
+[0m13:06:46  Found 7 models, 20 data tests, 1 source, 539 macros
+[0m13:06:46  
+[0m13:06:46  Concurrency: 1 threads (target='dev')
+[0m13:06:46  
+[0m13:06:49  1 of 20 START test accepted_values_rolling_average_anomalies_status__ANOMALY__Normal  [RUN]
+[0m13:06:52  1 of 20 PASS accepted_values_rolling_average_anomalies_status__ANOMALY__Normal . [[32mPASS[0m in 2.63s]
+[0m13:06:52  2 of 20 START test accepted_values_treatment_success_by_category_treatment_category__New_cases__Previously_treated__MDR_TB__HIV_positive_TB  [RUN]
+[0m13:06:54  2 of 20 PASS accepted_values_treatment_success_by_category_treatment_category__New_cases__Previously_treated__MDR_TB__HIV_positive_TB  [[32mPASS[0m in 2.36s]
+[0m13:06:54  3 of 20 START test not_null_composite_health_score_composite_health_score ...... [RUN]
+[0m13:06:56  3 of 20 PASS not_null_composite_health_score_composite_health_score ............ [[32mPASS[0m in 2.23s]
+[0m13:06:56  4 of 20 START test not_null_composite_health_score_year ........................ [RUN]
+[0m13:06:59  4 of 20 PASS not_null_composite_health_score_year .............................. [[32mPASS[0m in 2.53s]
+[0m13:06:59  5 of 20 START test not_null_hiv_tb_coinfection_year ............................ [RUN]
+[0m13:07:01  5 of 20 PASS not_null_hiv_tb_coinfection_year .................................. [[32mPASS[0m in 2.33s]
+[0m13:07:01  6 of 20 START test not_null_rolling_average_anomalies_status ................... [RUN]
+[0m13:07:04  6 of 20 PASS not_null_rolling_average_anomalies_status ......................... [[32mPASS[0m in 2.96s]
+[0m13:07:04  7 of 20 START test not_null_rolling_average_anomalies_year ..................... [RUN]
+[0m13:07:06  7 of 20 PASS not_null_rolling_average_anomalies_year ........................... [[32mPASS[0m in 2.25s]
+[0m13:07:06  8 of 20 START test not_null_stg_tb_indicator_indicator_code .................... [RUN]
+[0m13:07:09  8 of 20 PASS not_null_stg_tb_indicator_indicator_code .......................... [[32mPASS[0m in 3.03s]
+[0m13:07:09  9 of 20 START test not_null_stg_tb_indicator_year .............................. [RUN]
+[0m13:07:12  9 of 20 PASS not_null_stg_tb_indicator_year .................................... [[32mPASS[0m in 2.57s]
+[0m13:07:12  10 of 20 START test not_null_tb_incidence_trend_incidence_per_100k ............. [RUN]
+[0m13:07:14  10 of 20 PASS not_null_tb_incidence_trend_incidence_per_100k ................... [[32mPASS[0m in 2.20s]
+[0m13:07:14  11 of 20 START test not_null_tb_incidence_trend_year ........................... [RUN]
+[0m13:07:18  11 of 20 PASS not_null_tb_incidence_trend_year ................................. [[32mPASS[0m in 3.46s]
+[0m13:07:18  12 of 20 START test not_null_treatment_success_by_category_success_rate ........ [RUN]
+[0m13:07:20  12 of 20 PASS not_null_treatment_success_by_category_success_rate .............. [[32mPASS[0m in 2.32s]
+[0m13:07:20  13 of 20 START test not_null_treatment_success_by_category_treatment_category .. [RUN]
+[0m13:07:24  13 of 20 PASS not_null_treatment_success_by_category_treatment_category ........ [[32mPASS[0m in 3.75s]
+[0m13:07:24  14 of 20 START test not_null_treatment_success_by_category_year ................ [RUN]
+[0m13:07:26  14 of 20 PASS not_null_treatment_success_by_category_year ...................... [[32mPASS[0m in 2.18s]
+[0m13:07:26  15 of 20 START test not_null_treatment_success_rates_year ...................... [RUN]
+[0m13:07:28  15 of 20 PASS not_null_treatment_success_rates_year ............................ [[32mPASS[0m in 2.22s]
+[0m13:07:28  16 of 20 START test unique_composite_health_score_year ......................... [RUN]
+[0m13:07:30  16 of 20 PASS unique_composite_health_score_year ............................... [[32mPASS[0m in 2.39s]
+[0m13:07:30  17 of 20 START test unique_hiv_tb_coinfection_year ............................. [RUN]
+[0m13:07:33  17 of 20 PASS unique_hiv_tb_coinfection_year ................................... [[32mPASS[0m in 2.23s]
+[0m13:07:33  18 of 20 START test unique_rolling_average_anomalies_year ...................... [RUN]
+[0m13:07:35  18 of 20 PASS unique_rolling_average_anomalies_year ............................ [[32mPASS[0m in 2.13s]
+[0m13:07:35  19 of 20 START test unique_tb_incidence_trend_year ............................. [RUN]
+[0m13:07:37  19 of 20 PASS unique_tb_incidence_trend_year ................................... [[32mPASS[0m in 2.30s]
+[0m13:07:37  20 of 20 START test unique_treatment_success_rates_year ........................ [RUN]
+[0m13:07:39  20 of 20 PASS unique_treatment_success_rates_year .............................. [[32mPASS[0m in 2.27s]
+[0m13:07:39  
+[0m13:07:39  Finished running 20 data tests in 0 hours 0 minutes and 53.38 seconds (53.38s).
+[0m13:07:39  
+[0m13:07:39  [32mCompleted successfully[0m
+[0m13:07:39  
+[0m13:07:39  Done. PASS=20 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=20

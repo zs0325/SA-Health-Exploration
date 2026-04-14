@@ -1,0 +1,81 @@
+version: 2
+
+models:
+  - name: tb_incidence_trend
+    description: "Year-over-year TB incidence per 100k population with absolute and percentage change."
+    columns:
+      - name: year
+        description: "Year of measurement."
+        tests:
+          - not_null
+          - unique
+      - name: incidence_per_100k
+        description: "TB incidence rate per 100,000 population."
+        tests:
+          - not_null
+
+  - name: treatment_success_rates
+    description: "Pivoted treatment success rates for all TB categories per year."
+    columns:
+      - name: year
+        description: "Year of measurement."
+        tests:
+          - not_null
+          - unique
+
+  - name: treatment_success_by_category
+    description: "Treatment success rates broken out by TB category, with rank within each year."
+    columns:
+      - name: year
+        description: "Year of measurement."
+        tests:
+          - not_null
+      - name: treatment_category
+        description: "TB treatment category (New cases, Previously treated, MDR-TB, HIV-positive TB)."
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['New cases', 'Previously treated', 'MDR-TB', 'HIV-positive TB']
+      - name: success_rate
+        description: "Treatment success rate (%)."
+        tests:
+          - not_null
+
+  - name: hiv_tb_coinfection
+    description: "HIV-TB coinfection counts, proportion of total TB cases, and treatment success rate."
+    columns:
+      - name: year
+        description: "Year of measurement."
+        tests:
+          - not_null
+          - unique
+      - name: hiv_tb_pct_of_total
+        description: "HIV-TB cases as a percentage of total TB cases."
+
+  - name: rolling_average_anomalies
+    description: "TB incidence with 5-year rolling average and anomaly flags for years deviating by more than 1 stddev."
+    columns:
+      - name: year
+        description: "Year of measurement."
+        tests:
+          - not_null
+          - unique
+      - name: status
+        description: "ANOMALY if deviation exceeds 1 stddev, otherwise Normal."
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['ANOMALY', 'Normal']
+
+  - name: composite_health_score
+    description: "Weighted composite health score: 40% new TSR + 40% treatment coverage + 20% HIV test rate."
+    columns:
+      - name: year
+        description: "Year of measurement."
+        tests:
+          - not_null
+          - unique
+      - name: composite_health_score
+        description: "Weighted composite score out of 100."
+        tests:
+          - not_null
